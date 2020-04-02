@@ -52,8 +52,6 @@ class queen:
 
     def locat(self):
 
-
-
         if self.row == 0 :
             self.column = self.column + 1
             queen.BOARD.append([self.row, self.column])
@@ -67,15 +65,13 @@ class queen:
             if attack_count == 0:
                 queen.BOARD.append([self.row,i])
                 self.column = i
+                
                 print(f'*** queen#{self.row}: in place#{i} i am confortable')
                 draw(queen.BOARD,self.Q_COUNT)
-                
                 return 1
             else:
                 print(f'!!!  queen#{self.row}: in place#{i} i am in attack')
 
-
-        
         self.column = -1
         queen.BOARD.pop()
         self.neighboar.locat()
